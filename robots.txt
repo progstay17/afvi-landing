@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://afvi-landing.pages.dev/sitemap.xml
+Sitemap: https://progstay17.github.io/afvi-landing/sitemap.xml
