@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#120b0b">
+  <meta name="description" content="Ubah rutinitas kecil jadi progress yang terasa. Bangun kebiasaan, kumpulkan XP, dan terus naik level bersama aFVi — Life Progress RPG.">
+  <title>aFVi — Hidupmu, Petualanganmu</title>
+  <style>
+    :root{color-scheme:dark;--bg:#100909;--panel:#1b1010;--panel2:#241313;--ink:#fff4e9;--muted:#c3aaa0;--fire:#ff7138;--gold:#ffc36a;--line:rgba(255,191,140,.16);--max:1120px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at 75% 0%,rgba(150,45,18,.28),transparent 35%),radial-gradient(ellipse at 10% 35%,rgba(96,28,19,.22),transparent 38%),var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;letter-spacing:.08em;font-size:1.1rem}
+    .brand-mark{display:grid;place-items:center;width:38px;height:38px;border:1px solid #ff8b50;border-radius:12px;background:linear-gradient(145deg,#ff8b50,#8f2c17);box-shadow:0 0 28px #ff5b2926}
+    .navlinks{display:flex;align-items:center;gap:26px;color:var(--muted);font-size:.92rem}
+    .navlinks a{text-decoration:none}.navlinks a:hover{color:var(--ink)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 19px;border-radius:12px;border:1px solid transparent;text-decoration:none;font-weight:800;transition:transform .18s ease,background .18s ease,border-color .18s ease}
+    .btn:hover{transform:translateY(-2px)}.btn-primary{color:#26100a;background:linear-gradient(135deg,#ffc16a,#ff7138);box-shadow:0 8px 30px #ff632a26}.btn-secondary{background:#ffffff08;border-color:var(--line);color:var(--ink)}
+    .hero{min-height:590px;display:grid;grid-template-columns:1.06fr .94fr;align-items:center;gap:40px;padding:52px 0 84px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:#ffc27d;font-size:.78rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:25px;height:1px;background:var(--fire)}
+    h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.8rem,6vw,5.45rem);line-height:.99;letter-spacing:-.065em;margin:20px 0 24px;max-width:720px}
+    .gradient{background:linear-gradient(100deg,#fff3df 10%,#ffb26c 53%,#ff693b);color:transparent;background-clip:text;-webkit-background-clip:text}
+    .lead{max-width:570px;color:var(--muted);font-size:1.12rem;margin-bottom:28px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}.tiny-note{color:#987d73;font-size:.8rem;margin-top:18px}
+    .hero-art{min-height:430px;position:relative;display:grid;place-items:center;isolation:isolate}
+    .orb{position:absolute;width:min(390px,90%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 40%,#ff8b4233,transparent 63%);border:1px solid #ff9b5b1c;box-shadow:0 0 90px #e7461b12,inset 0 0 50px #f56d2520}
+    .ring{position:absolute;width:310px;height:310px;border:1px solid #ffb16a30;border-radius:50%;transform:rotate(-28deg) scaleY(.36)}
+    .ring.two{width:370px;height:370px;transform:rotate(35deg) scaleY(.36);border-color:#ff6a3930}
+    .sigil{position:absolute;top:14%;right:9%;color:#ffbd77;font-size:1.7rem;opacity:.8}
+    .companion{position:relative;z-index:1;width:205px;height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center;filter:drop-shadow(0 22px 32px #ff4b2130);animation:float 4.5s ease-in-out infinite}
+    .companion .ears{display:flex;gap:65px;margin-bottom:-9px;z-index:0}.ear{width:37px;height:62px;background:linear-gradient(145deg,#ffbd76,#e95732);border:2px solid #ffcc91;clip-path:polygon(50% 0,100% 100%,0 78%);border-radius:10px}
+    .face{width:148px;height:145px;border:2px solid #ffc17d;border-radius:47% 47% 43% 43%;background:radial-gradient(circle at 35% 24%,#ffcf8e,#ff873f 45%,#a92e20);position:relative;box-shadow:inset -14px -15px 0 #8c291d35,0 0 36px #ff7a3528}
+    .face:before,.face:after{content:"";position:absolute;top:61px;width:12px;height:18px;border-radius:50%;background:#32120f;box-shadow:0 0 0 4px #ffe0a0}
+    .face:before{left:37px}.face:after{right:37px}
+    .cheek{position:absolute;top:83px;width:22px;height:9px;border-radius:50%;background:#ffb47c;opacity:.8}.cheek.left{left:19px}.cheek.right{right:19px}
+    .smile{position:absolute;left:62px;top:84px;width:23px;height:12px;border-bottom:3px solid #511a15;border-radius:0 0 50% 50%}
+    .chest{margin-top:-3px;width:92px;height:43px;border-radius:18px 18px 25px 25px;background:linear-gradient(120deg,#ffb95f,#d34427);border:2px solid #ffcb83;position:relative}
+    .chest:after{content:"✦";position:absolute;inset:2px;display:grid;place-items:center;color:#fff1bc;font-size:1.2rem}
+    .float-card{position:absolute;z-index:2;background:rgba(29,15,13,.88);border:1px solid var(--line);border-radius:14px;padding:13px 15px;box-shadow:0 12px 35px #0004;backdrop-filter:blur(12px)}
+    .float-card strong{display:block;font-size:.92rem}.float-card span{font-size:.77rem;color:var(--muted)}
+    .xp-card{left:0;top:18%}.streak-card{right:0;bottom:17%}.mini-bar{height:5px;background:#ffffff17;border-radius:10px;margin-top:9px;overflow:hidden;width:130px}.mini-bar i{display:block;height:100%;width:68%;background:linear-gradient(90deg,#ff9a49,#ffdb87);border-radius:10px}
+    .scroll-cue{font-size:.8rem;color:#a8897d;margin-top:32px}
+    section{padding:76px 0}.section-head{max-width:700px;margin-bottom:34px}.section-head h2{font-size:clamp(2rem,4vw,3.25rem);line-height:1.08;letter-spacing:-.045em;margin:14px 0}.section-head p{color:var(--muted);font-size:1.04rem}
+    .steps,.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .panel{background:linear-gradient(145deg,#251414d9,#170d0df2);border:1px solid var(--line);border-radius:20px;padding:25px;position:relative;overflow:hidden}
+    .panel:after{content:"";position:absolute;inset:auto -40px -70px auto;width:150px;height:150px;border-radius:50%;background:#f05b2410;filter:blur(2px);pointer-events:none}
+    .num{font-size:.78rem;color:#ffad67;font-weight:900;letter-spacing:.12em}.panel-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:#ff793018;border:1px solid #ff9a4a30;font-size:1.35rem;margin:18px 0}
+    .panel h3{font-size:1.2rem;margin-bottom:8px}.panel p{color:var(--muted);font-size:.95rem;margin-bottom:0}
+    .progress-section{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+    .progress-visual{padding:25px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#281411,#150c0c);box-shadow:0 25px 70px #0002}
+    .mock-top{display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:.82rem;margin-bottom:20px}.mock-top strong{color:var(--ink)}
+    .quest{display:flex;align-items:center;gap:14px;padding:15px;margin-top:11px;border-radius:14px;background:#ffffff06;border:1px solid #ffffff0d}
+    .check{width:27px;height:27px;display:grid;place-items:center;flex:none;border:1px solid #ff9d59;border-radius:8px;color:#ffc27d}.quest strong{display:block;font-size:.94rem}.quest small{color:var(--muted)}
+    .quest .points{margin-left:auto;color:#ffc17b;font-weight:800;font-size:.83rem;white-space:nowrap}
+    .xp-track{height:9px;background:#ffffff12;border-radius:20px;overflow:hidden;margin-top:17px}.xp-track span{display:block;height:100%;width:64%;background:linear-gradient(90deg,#ff6535,#ffc56f);border-radius:20px}
+    .progress-copy h2{font-size:clamp(2rem,4vw,3.1rem);line-height:1.08;letter-spacing:-.04em}.progress-copy p{color:var(--muted)}
+    .callout{padding:22px;border-left:2px solid var(--fire);background:#ff79300b;color:#f4c5a3;border-radius:0 14px 14px 0;margin-top:24px}
+    .companion-band{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;padding:34px 40px;border:1px solid #ff9c4a30;border-radius:24px;background:radial-gradient(ellipse at 90% 50%,#a738201f,transparent 48%),linear-gradient(120deg,#24110f,#170d0d)}
+    .companion-band h2{font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.1;letter-spacing:-.04em;margin:12px 0}.companion-band p{color:var(--muted);max-width:650px;margin-bottom:0}.buddy-small{font-size:5rem;filter:drop-shadow(0 0 25px #ff743e40);padding:0 15px}
+    .faq{max-width:820px}.faq details{border-bottom:1px solid var(--line);padding:19px 0}.faq summary{cursor:pointer;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:20px}.faq summary:after{content:"+";color:var(--gold);font-size:1.2rem}.faq details[open] summary:after{content:"−"}.faq details p{color:var(--muted);margin:13px 0 0;max-width:720px}
+    .final-cta{text-align:center;padding:65px 24px;border-radius:26px;border:1px solid #ff9c4a30;background:radial-gradient(ellipse at 50% 0%,#a8382026,transparent 65%),#1a0d0d}.final-cta h2{font-size:clamp(2.2rem,5vw,4rem);letter-spacing:-.05em;line-height:1.04;margin:16px auto;max-width:700px}.final-cta p{color:var(--muted);max-width:580px;margin:0 auto 25px}
+    footer{padding:34px 0 42px;color:#9d8177;font-size:.84rem}.foot-row{display:flex;justify-content:space-between;gap:20px;align-items:center;border-top:1px solid var(--line);padding-top:24px}.foot-row a{text-decoration:none}.foot-links{display:flex;gap:18px}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+    @media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:35px;gap:10px}.hero-art{min-height:350px;order:-1}.hero-copy{padding-bottom:20px}.xp-card{left:3%;top:10%}.streak-card{right:2%;bottom:12%}.steps,.features{grid-template-columns:1fr}.progress-section{grid-template-columns:1fr;gap:30px}.companion-band{grid-template-columns:1fr;gap:8px;padding:28px}.buddy-small{display:none}section{padding:58px 0}}
+    @media(max-width:480px){.wrap{width:min(var(--max),calc(100% - 28px))}.nav{padding:16px 0}.nav>.btn{padding:10px 12px;font-size:.82rem}.hero{padding-bottom:45px}h1{font-size:3rem}.hero-art{min-height:310px}.companion{transform:scale(.82)}.orb{width:285px}.ring{width:245px;height:245px}.ring.two{width:290px;height:290px}.float-card{padding:10px 12px}.xp-card{top:8%;left:0}.streak-card{bottom:7%;right:0}.mini-bar{width:105px}.panel{padding:21px}.progress-visual{padding:17px}.quest{gap:10px;padding:12px}.quest .points{font-size:.75rem}.foot-row{align-items:flex-start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav class="nav" aria-label="Navigasi utama">
+      <a class="brand" href="#" aria-label="aFVi beranda"><span class="brand-mark" aria-hidden="true">✦</span><span>aFVi</span></a>
+      <div class="navlinks"><a href="#cara-kerja">Cara kerja</a><a href="#fitur">Fitur</a><a href="#afvi">Companion</a><a href="#faq">FAQ</a></div>
+      <a class="btn btn-secondary" href="https://afvi-app.pages.dev">Buka aplikasi <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main>
+    <section class="wrap hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow">Life Progress RPG</span>
+        <h1 id="hero-title">Hidupmu bukan checklist. <span class="gradient">Ini petualangan.</span></h1>
+        <p class="lead">Ubah langkah kecil jadi progress yang terasa. Bangun rutinitas, kumpulkan XP, dan terus berkembang—satu quest dalam satu waktu.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="https://afvi-app.pages.dev">Mulai petualangan <span aria-hidden="true">→</span></a><a class="btn btn-secondary" href="#cara-kerja">Lihat cara kerja</a></div>
+        <p class="tiny-note">Progress nyata dimulai dari langkah yang bisa kamu lakukan hari ini.</p>
+      </div>
+      <div class="hero-art" role="img" aria-label="Ilustrasi abstrak companion fantasi berwarna api dengan simbol progress">
+        <div class="orb"></div><div class="ring"></div><div class="ring two"></div><div class="sigil" aria-hidden="true">✧</div>
+        <div class="companion" aria-hidden="true"><div class="ears"><span class="ear"></span><span class="ear"></span></div><div class="face"><span class="cheek left"></span><span class="cheek right"></span><span class="smile"></span></div><div class="chest"></div></div>
+        <div class="float-card xp-card"><strong>✦ Progress harian</strong><span>Setiap langkah punya arti</span><div class="mini-bar"><i></i></div></div>
+        <div class="float-card streak-card"><strong>⚡ Satu quest lagi</strong><span>Konsistensi dibangun perlahan</span></div>
+      </div>
+    </section>
+
+    <section class="wrap" id="cara-kerja">
+      <div class="section-head"><span class="eyebrow">Mulai dari yang kecil</span><h2>Langkah kecil. <span class="gradient">Level up sungguhan.</span></h2><p>Nggak harus mengubah semuanya sekaligus. Pecah tujuan besar jadi aksi yang masuk akal, lalu bangun momentum dari sana.</p></div>
+      <div class="steps">
+        <article class="panel"><span class="num">01 / QUEST</span><div class="panel-icon" aria-hidden="true">⚔️</div><h3>Pilih quest-mu</h3><p>Ubah tujuan menjadi langkah kecil yang jelas dan realistis untuk dikerjakan hari ini.</p></article>
+        <article class="panel"><span class="num">02 / XP</span><div class="panel-icon" aria-hidden="true">✦</div><h3>Kumpulkan progress</h3><p>Tandai langkah yang selesai dan jadikan usaha sehari-hari bagian dari perjalananmu.</p></article>
+        <article class="panel"><span class="num">03 / EVOLVE</span><div class="panel-icon" aria-hidden="true">🔥</div><h3>Terus berkembang</h3><p>Bangun konsistensi sedikit demi sedikit. Fokus pada proses, bukan kesempurnaan.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="fitur">
+      <div class="progress-section">
+        <div class="progress-copy"><span class="eyebrow">Bikin progress terasa</span><h2>Bukan sekadar mencentang kotak.</h2><p>aFVi membawa nuansa quest dan perkembangan karakter ke rutinitas harianmu. Tujuannya sederhana: bikin langkah berikutnya terasa lebih jelas dan memuaskan.</p><div class="callout">Kamu nggak perlu menang setiap hari. Kamu hanya perlu punya cara untuk kembali melangkah.</div></div>
+        <div class="progress-visual" aria-label="Ilustrasi konseptual papan quest dan progress XP">
+          <div class="mock-top"><span><strong>QUEST BOARD</strong><br>Perjalanan hari ini</span><span>PROGRESS<br><strong>Terus bergerak</strong></span></div>
+          <div class="quest"><span class="check" aria-hidden="true">✓</span><div><strong>Mulai dari 10 menit</strong><small>Satu langkah kecil</small></div><span class="points">+ XP</span></div>
+          <div class="quest"><span class="check" aria-hidden="true">✦</span><div><strong>Jaga ritme</strong><small>Bangun konsistensi</small></div><span class="points">QUEST</span></div>
+          <div class="quest"><span class="check" aria-hidden="true">↗</span><div><strong>Ulangi besok</strong><small>Progress dibangun dari waktu ke waktu</small></div></div>
+          <div class="xp-track" aria-label="Ilustrasi bar progress"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="afvi">
+      <div class="companion-band">
+        <div><span class="eyebrow">Companion-mu</span><h2>Kenalan dengan <span class="gradient">Afvi.</span></h2><p>Petualangan terasa lebih hidup saat ada teman perjalanan. Afvi adalah wajah kecil dari semangatmu untuk terus mencoba—bahkan ketika progress terasa lambat.</p></div>
+        <div class="buddy-small" aria-hidden="true">🔥</div>
+      </div>
+    </section>
+
+    <section class="wrap faq" id="faq">
+      <div class="section-head"><span class="eyebrow">Pertanyaan umum</span><h2>Mulai tanpa ribet.</h2><p>Beberapa hal yang mungkin ingin kamu tahu sebelum memulai.</p></div>
+      <details><summary>Apa itu aFVi?</summary><p>aFVi adalah konsep Life Progress RPG yang membawa elemen quest dan progress ke rutinitas harian agar langkah kecil terasa lebih bermakna.</p></details>
+      <details><summary>Harus produktif setiap hari?</summary><p>Nggak. Tujuannya bukan mengejar kesempurnaan, tetapi membangun ritme yang bisa kamu jalani dan kembali melangkah saat terlewat.</p></details>
+      <details><summary>Bagaimana cara mencobanya?</summary><p>Buka aplikasi aFVi melalui tombol di halaman ini. Fitur yang tersedia bisa kamu lihat langsung di aplikasi.</p></details>
+      <details><summary>Apakah halaman ini aplikasi aFVi?</summary><p>Bukan. Ini halaman pengenalan terpisah. Aplikasi utama tetap berada di afvi-app.pages.dev.</p></details>
+    </section>
+
+    <section class="wrap">
+      <div class="final-cta"><span class="eyebrow">Quest berikutnya menunggu</span><h2>Jadikan hari ini <span class="gradient">awal yang baru.</span></h2><p>Nggak perlu menunggu motivasi sempurna. Pilih satu langkah kecil, lalu mulai perjalananmu.</p><a class="btn btn-primary" href="https://afvi-app.pages.dev">Masuk ke aFVi <span aria-hidden="true">→</span></a></div>
+    </section>
+  </main>
+  <footer class="wrap"><div class="foot-row"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">✦</span><span>aFVi</span></a><span>Life Progress RPG · Dibangun dari langkah kecil.</span><div class="foot-links"><a href="https://afvi-app.pages.dev">Aplikasi</a><a href="#cara-kerja">Cara kerja</a><a href="#faq">FAQ</a></div></div></footer>
+</body>
+</html>
