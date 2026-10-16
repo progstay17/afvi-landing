@@ -10,6 +10,12 @@ A static landing page introducing aFVi, a life-progress RPG concept built around
 
 > **Ghifarion** · Engineering Intelligence. Building Legacy.
 
+Landing page statis berbahasa Indonesia untuk memperkenalkan aFVi, aplikasi habit tracker gamifikasi bergaya Life Progress RPG. Halaman ini terpisah dari aplikasi utama.
+
+- **Landing page:** https://progstay17.github.io/afvi-landing/
+- **Aplikasi utama:** https://afvi-app.pages.dev
+- **Source:** `index.html`, `robots.txt`, dan `sitemap.xml`
+
 ## On this page
 
 - [Konten dan metadata](#konten-dan-metadata)
