@@ -6,11 +6,18 @@
 
 # aFVi — Life Progress RPG Landing Page
 
-Landing page statis berbahasa Indonesia untuk memperkenalkan aFVi, aplikasi habit tracker gamifikasi bergaya Life Progress RPG. Halaman ini terpisah dari aplikasi utama.
+A static landing page introducing aFVi, a life-progress RPG concept built around habits, quests, and personal growth.
 
-- **Landing page:** https://progstay17.github.io/afvi-landing/
-- **Aplikasi utama:** https://afvi-app.pages.dev
-- **Source:** `index.html`, `robots.txt`, dan `sitemap.xml`
+> **Ghifarion** · Engineering Intelligence. Building Legacy.
+
+## On this page
+
+- [Live experience](#live-experience)
+- [Project overview](#project-overview)
+- [Local development](#local-development)
+- [Deployment](#deployment)
+
+---
 
 ## Konten dan metadata
 
