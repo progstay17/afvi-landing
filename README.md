@@ -12,10 +12,9 @@ A static landing page introducing aFVi, a life-progress RPG concept built around
 
 ## On this page
 
-- [Live experience](#live-experience)
-- [Project overview](#project-overview)
-- [Local development](#local-development)
+- [Konten dan metadata](#konten-dan-metadata)
 - [Deployment](#deployment)
+- [Pengembangan](#pengembangan)
 
 ---
 
