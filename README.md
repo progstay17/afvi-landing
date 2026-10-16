@@ -1,22 +1,19 @@
 # aFVi — Life Progress RPG Landing Page
 
-Landing page terpisah untuk aFVi, sebuah Life Progress RPG.
+Landing page statis berbahasa Indonesia untuk memperkenalkan aFVi, aplikasi habit tracker gamifikasi bergaya Life Progress RPG. Halaman ini terpisah dari aplikasi utama.
 
-## Prinsip proyek
-- Bahasa utama: Bahasa Indonesia.
-- Visual: dark fantasy dengan aksen api/oranye, nuansa game, dan companion Afvi.
-- Responsif untuk mobile dan desktop.
-- Aksesibilitas: kontras yang jelas, navigasi keyboard, dan dukungan reduced motion.
-- Jangan mengubah aplikasi utama: https://afvi-app.pages.dev
-- Jangan mengarang fitur, statistik, testimoni, atau screenshot produk yang belum diverifikasi.
+- **Landing page:** https://progstay17.github.io/afvi-landing/
+- **Aplikasi utama:** https://afvi-app.pages.dev
+- **Source:** `index.html`, `robots.txt`, dan `sitemap.xml`
 
-## Rencana halaman
-1. Hero dan CTA menuju aplikasi utama.
-2. Cara kerja: atomic tasks, XP, race/evolution.
-3. Fitur yang sudah dikonfirmasi.
-4. Companion Afvi.
-5. FAQ.
-6. CTA akhir dan footer.
+## Konten dan metadata
 
-## Deploy
-Deploy sebagai Render Static Site dari repository ini setelah source landing page ditambahkan.
+Halaman berisi pengenalan produk, CTA menuju aplikasi utama, metadata SEO dan social sharing, structured data, serta FAQ. Konten mengikuti prinsip proyek: jangan mengarang fitur, statistik, testimoni, atau screenshot yang belum diverifikasi.
+
+## Deployment
+
+Repository ini memiliki workflow GitHub Pages di [`.github/workflows/deploy-pages.yml`](./.github/workflows/deploy-pages.yml). Periksa tab **Actions** dan pengaturan **Pages** repository jika deployment tidak diperbarui. Canonical URL, Open Graph URL, dan sitemap ditujukan ke alamat GitHub Pages di atas.
+
+## Pengembangan
+
+Karena landing page saat ini berupa HTML statis, tidak ada langkah build atau package installation yang diperlukan. Edit `index.html` dan uji di browser sebelum commit. Pastikan perubahan tetap responsif, bisa dinavigasi dengan keyboard, dan menghormati preferensi reduced motion bila animasi ditambahkan.
