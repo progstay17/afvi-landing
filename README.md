@@ -1,3 +1,9 @@
+<div align="center">
+
+<img src="assets/ghifarion/repo-banner.svg" alt="AFVI · LIFE PROGRESS RPG — A more intentional way to turn daily habits into progress." width="100%">
+
+</div>
+
 # aFVi — Life Progress RPG Landing Page
 
 Landing page statis berbahasa Indonesia untuk memperkenalkan aFVi, aplikasi habit tracker gamifikasi bergaya Life Progress RPG. Halaman ini terpisah dari aplikasi utama.
